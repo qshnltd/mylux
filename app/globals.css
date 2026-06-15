@@ -1,0 +1,123 @@
+@import "tailwindcss";
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+
+@theme {
+  --color-ore-bg: #1E1E1E;
+  --color-ore-panel: #313131;
+  --color-ore-dark: #111111;
+  --color-ore-green: #318231;
+  --color-ore-green-hover: #3B9B3B;
+  
+  --font-sans: var(--font-noto), system-ui, sans-serif;
+  --font-minecraft: 'Minecraft', var(--font-noto), sans-serif;
+}
+
+@layer utilities {
+  .font-minecraft {
+    font-family: 'Minecraft', sans-serif;
+    letter-spacing: 0.02em;
+    font-weight: normal;
+  }
+  
+  .font-sans {
+    font-family: var(--font-noto), sans-serif;
+  }
+
+  .ore-btn {
+    @apply relative flex items-center justify-center font-minecraft px-4 py-2 select-none active:scale-[0.98] transition-all duration-75 text-sm;
+    background-color: #3C3C3C;
+    color: #FFFFFF;
+    border: 2px solid #111111;
+    box-shadow: inset 0 0 0 1px #5A5A5A;
+  }
+  .ore-btn:hover {
+    background-color: #505050;
+    box-shadow: inset 0 0 0 1px #6E6E6E;
+    outline: 2px solid white;
+    outline-offset: 1px;
+    z-index: 10;
+  }
+  .ore-btn:active {
+    background-color: #282828;
+    box-shadow: inset 0 0 0 1px #141414;
+    border: 2px solid #318231;
+    outline: none;
+  }
+
+  .ore-btn-primary {
+    @apply relative flex items-center justify-center font-minecraft px-4 py-2 select-none active:scale-[0.98] transition-all duration-75 text-sm;
+    background-color: #318231;
+    color: #FFFFFF;
+    border: 2px solid #111111;
+    box-shadow: inset 0 0 0 1px #43A043;
+  }
+  .ore-btn-primary:hover {
+    background-color: #3B9B3B;
+    box-shadow: inset 0 0 0 1px #4EC04E;
+    outline: 2px solid white;
+    outline-offset: 1px;
+    z-index: 10;
+  }
+  .ore-btn-primary:active {
+    background-color: #225C22;
+    box-shadow: inset 0 0 0 1px #1A471A;
+    border: 2px solid #FFFFFF;
+    outline: none;
+  }
+
+  .ore-panel {
+    background-color: #313131;
+    border: 2px solid #111111;
+    box-shadow: inset 0 0 0 1px #464646;
+    color: #FFFFFF;
+  }
+  
+  .ore-panel-light {
+    background-color: #4A4A4A;
+    border: 2px solid #111111;
+    box-shadow: inset 0 0 0 1px #5D5D5D;
+    color: #FFFFFF;
+  }
+
+  .ore-input {
+    background-color: #1E1E1E;
+    border: 2px solid #111111;
+    box-shadow: inset 0 0 0 1px #282828;
+    color: #FFFFFF;
+    font-family: var(--font-noto), sans-serif;
+  }
+  
+  .ore-input:focus {
+    outline: 2px solid white;
+    outline-offset: 1px;
+  }
+
+  .text-shadow-ore {
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+  }
+
+  /* Custom OreUI Scrollbar */
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #111111; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #505050; 
+    border: 2px solid #111111;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6E6E6E; 
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
